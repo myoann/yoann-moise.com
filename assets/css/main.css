@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,300i,600,600i,900&display=swap");
 
 /*
 	Dimension by HTML5 UP
@@ -141,7 +141,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #ffffff;
-		font-family: "Source Sans Pro", sans-serif;
+		font-family: "Muli", sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.65;
@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1355,7 +1358,7 @@ input, select, textarea {
 
 				#header nav ul li a {
 					display: block;
-					min-width: 7.5rem;
+					min-width: 9rem;
 					height: 2.75rem;
 					line-height: 2.75rem;
 					padding: 0 1.25rem 0 1.45rem;
@@ -1530,6 +1533,7 @@ input, select, textarea {
 		z-index: 3;
 	}
 
+
 		#main article {
 			-moz-transform: translateY(0.25rem);
 			-webkit-transform: translateY(0.25rem);
@@ -1656,3 +1660,128 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+#work_1 {
+}
+
+.bg_work_1:after {
+	background-image: none !important;
+	background: linear-gradient(to bottom, #e01b37, #ffd101) !important;
+}
+
+.active ~ #bg {
+	width: 0;
+	background-color: orange;
+}
+
+.project_card {
+	background-color: white;
+	width: 40%;
+	color: #252830;
+}
+
+.media {
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	position: absolute;
+	transition: all 0.3s ease;
+	width: 100%;
+}
+
+figure {
+	height: 370px;
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+	margin: -4.5rem -2.5rem -1.5rem -2.5rem;
+}
+
+figure:hover .media {
+	transform: scale(1.25);
+}
+
+figcaption {
+	display: block;
+	color: #252830;
+	height: calc(100% - 15px);
+	margin: 15px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 250px;
+}
+
+svg {
+	height: inherit;
+	width: 100%;
+	border-radius: 4px;
+}
+
+svg text {
+	text-anchor: middle;
+}
+
+svg #alpha {
+	fill: white;
+}
+
+svg .project_card_title {
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: 5px;
+}
+
+svg #base {
+	fill: white;
+	-webkit-mask: url(#mask);
+	mask: url(#mask);
+}
+
+.project_card_body {
+	position: relative;
+	bottom: 15px;
+	display: flex;
+	justify-content: center;
+}
+
+.project_card_body p {
+	position: absolute;
+    bottom: 25px;
+    padding: 15px;
+   	font-size: 13px;
+    width: 100%;
+    cursor: default;
+}
+
+.call_to_action_button {
+	position: absolute;
+	bottom: 5px;
+	background-color: #FA7268;
+	border: 1px solid #FA7268;
+	color: white;
+	border-radius: 4px;
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	transition: all 0.3s ease;
+}
+
+.call_to_action_button:hover {
+	background-color: #FA7268;
+	color: white;
+}
+
+#previous_button {
+	position: fixed;
+	left: 15px;
+	top: 50px;
+}
+
+.arrow_icon {
+	background-color: black;
+	padding: 10px;
+	border-radius: 50%;
+}

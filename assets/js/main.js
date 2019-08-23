@@ -92,6 +92,9 @@
 							// Deactivate all articles (just in case one's already active).
 								$main_articles.removeClass('active');
 
+							// Remove existing class to the background
+								$("#bg").removeClass();
+
 							// Hide header, footer.
 								$header.hide();
 								$footer.hide();
@@ -102,6 +105,9 @@
 
 							// Activate article.
 								$article.addClass('active');
+
+							// Add a specific class to the background
+								$("#bg").addClass(`bg_${id}`);
 
 							// Unlock.
 								locked = false;
@@ -125,6 +131,9 @@
 							var $currentArticle = $main_articles.filter('.active');
 
 							$currentArticle.removeClass('active');
+
+							// Remove existing class to the background
+								$("#bg").removeClass();
 
 						// Show article.
 							setTimeout(function() {
@@ -221,6 +230,10 @@
 							// Deactivate article.
 								$article.removeClass('active');
 
+							// Remove existing class to the background
+								$("#bg").removeClass();
+
+
 							// Hide article, main.
 								$article.hide();
 								$main.hide();
@@ -252,6 +265,9 @@
 
 				// Deactivate article.
 					$article.removeClass('active');
+
+				// Remove existing class to the background
+					$("#bg").removeClass();
 
 				// Hide article.
 					setTimeout(function() {
