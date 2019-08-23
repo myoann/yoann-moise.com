@@ -1776,12 +1776,24 @@ svg #base {
 
 #previous_button {
 	position: fixed;
-	left: 15px;
-	top: 50px;
+	left: 5%;
+	top: 50%;
+}
+
+#next_button {
+	position: fixed;
+	right: 5%;
+	top: 50%;	
 }
 
 .arrow_icon {
-	background-color: black;
-	padding: 10px;
+	background-color: rgba(0,0,0,0.5);
+	padding: 16px 22px;
 	border-radius: 50%;
+}
+.arrow_icon:hover {
+	background-color: rgba(0,0,0,0.75);
+}
+.arrow_icon:before {
+	display: initial;
 }
