@@ -103,39 +103,49 @@
 
 						<!-- About -->
 							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<h2 class="major">Career Path</h2>
+								<span class="image main"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/030caa74645651.5c360d6d85934.gif" alt="" /></span>
+								
+								<p>I have spent the last five years developing my skills as a freelance and I also have spent two years working for a research center as a semantic web developer and for a company as a software developer. 
+								As a freelance, I mostly worked for companies who needed a website or an Android application to improve their sales.</p>
+
+								<p>Currently, I am working as a CRM Lead and ----------eer at Sopra Steria and am also stuyding for my Master's Degree in Computer Science. 
+								At Sopra Steria, I work for the biggest project of the company in the South of France which is a web application for a client to manage its users. The database used has millions of entries so the challenge of this app is to handle an important amount of data while still being fast and efficient.</p>
+
+								<p>As I am soon going to graduate, I feel I am now ready for a challenging assignment. 
+								I am interested in exploring career opportunities in IT, specifically in sotfware engineering and Web / Mobile App Development and I would like to build a career that lets me focus on professional growth.</p>
 							</article>
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<span class="image main"><img src="https://i.redd.it/izptoyn7i4uz.gif" alt="" /></span>
+
+								<form id="contact_form" method="post" action="mailto:emailtest@free.fr">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="email" id="email" required/>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="message" id="message" rows="4" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://twitter.com/myoann" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://facebook.com/ymoise" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://github.com/myoann" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/yoannmoise" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+									<li><a href="https://mailhide.io/e/Sdl6U"><span class="label">Instagram</span></a></li>	
 								</ul>
 							</article>
 
@@ -399,6 +409,34 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://www.google.com/recaptcha/api.js?render=6LcZIrUUAAAAAOQnmzRueFyAHh7BbQvRoYnRWWEU"></script>
+			<script>
+			    // when form is submit
+				$('#contact_form').submit(function() {
+					// we stoped it
+			        event.preventDefault();
+			        var name = $('#name').val();
+			        var email = $('#email').val();
+			        var comment = $("#comment").val();
+				})
+				// needs for recaptcha ready
+				grecaptcha.ready(function() {
+					// do request for recaptcha token
+            		// response is promise with passed token
+					grecaptcha.execute('PRIVATEKEY', {action: 'homepage'}).then(function(token) {
+						
+						// add token to form
+		                $('#comment_form').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+		                $.post("form.php",{email: email, comment: comment, token: token}, function(result) {
+		                	console.log(result);
+	                    	if(result.success) {
+	                        	alert('Thanks for posting comment.')
+	                        } else {
+	                        	alert('You are spammer ! Get the @$%K out.')
+	                        }
 
+					});
+				});
+			</script>
 	</body>
 </html>

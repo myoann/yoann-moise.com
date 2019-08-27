@@ -696,8 +696,10 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 2.5rem 0;
-			width: 100%;
+			width: 40rem;
+			z-index: -1;
+			margin: -9.2rem -2.5rem 2.5rem -2.5rem;
+
 		}
 
 			.image.main img {
@@ -876,7 +878,6 @@ input, select, textarea {
 					}
 
 					ul.actions:not(.fixed) li input[type="submit"],
-					ul.actions:not(.fixed) li input[type="reset"],
 					ul.actions:not(.fixed) li input[type="button"],
 					ul.actions:not(.fixed) li button,
 					ul.actions:not(.fixed) li .button {
@@ -884,7 +885,6 @@ input, select, textarea {
 					}
 
 						ul.actions:not(.fixed) li input[type="submit"].icon:before,
-						ul.actions:not(.fixed) li input[type="reset"].icon:before,
 						ul.actions:not(.fixed) li input[type="button"].icon:before,
 						ul.actions:not(.fixed) li button.icon:before,
 						ul.actions:not(.fixed) li .button.icon:before {
@@ -999,7 +999,6 @@ input, select, textarea {
 /* Button */
 
 	input[type="submit"],
-	input[type="reset"],
 	input[type="button"],
 	button,
 	.button {
@@ -1032,7 +1031,6 @@ input, select, textarea {
 	}
 
 		input[type="submit"]:hover,
-		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
@@ -1040,7 +1038,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"]:active,
-		input[type="reset"]:active,
 		input[type="button"]:active,
 		button:active,
 		.button:active {
@@ -1048,7 +1045,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"].icon:before,
-		input[type="reset"].icon:before,
 		input[type="button"].icon:before,
 		button.icon:before,
 		.button.icon:before {
@@ -1056,7 +1052,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"].fit,
-		input[type="reset"].fit,
 		input[type="button"].fit,
 		button.fit,
 		.button.fit {
@@ -1064,7 +1059,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"].small,
-		input[type="reset"].small,
 		input[type="button"].small,
 		button.small,
 		.button.small {
@@ -1074,18 +1068,15 @@ input, select, textarea {
 		}
 
 		input[type="submit"].primary,
-		input[type="reset"].primary,
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
 			background-color: #ffffff;
-			color: #1b1f22 !important;
+			color: #FA7268 !important;
 			font-weight: 600;
 		}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
-		input[type="reset"].disabled,
-		input[type="reset"]:disabled,
 		input[type="button"].disabled,
 		input[type="button"]:disabled,
 		button.disabled,
@@ -1098,7 +1089,6 @@ input, select, textarea {
 		}
 
 	input[type="submit"],
-	input[type="reset"],
 	input[type="button"],
 	button {
 		line-height: calc(2.75rem - 2px);
@@ -1668,6 +1658,16 @@ input, select, textarea {
 	background-image: none !important;
 	background: linear-gradient(to bottom, #e01b37, #ffd101) !important;
 }
+
+.bg_about:after {
+	background-image: none !important;
+	background: linear-gradient(to bottom, #bc9c98, #ba249f) !important;
+}
+
+/*.bg_contact:after {
+	background-image: none !important;
+	background: linear-gradient(to right, #860562, #302f48) !important;	
+}*/
 
 .active ~ #bg {
 	width: 0;
