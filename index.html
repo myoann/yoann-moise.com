@@ -46,7 +46,7 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="https://i.pinimg.com/originals/ed/a5/73/eda5739966cb33768d8ad0d77d7307ce.gif" alt="" /></span>
+								<span class="image main"><img src="./assets/images/intro.gif" alt="" /></span>
 								<p>Ever since I was a young boy, my father taught me how to use the keyboard and the mouse. 
 								At that time, we would drink orange juice together while waiting for a picture to load on the computer screen, but nowadays technologies have evolved tremendously: we have more than 3 billion internet users and our needs are transforming towards this technological revolution.</p>
 
@@ -104,24 +104,24 @@
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">Career Path</h2>
-								<span class="image main"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/030caa74645651.5c360d6d85934.gif" alt="" /></span>
-								
-								<p>I have spent the last five years developing my skills as a freelance and I also have spent two years working for a research center as a semantic web developer and for a company as a software developer. 
-								As a freelance, I mostly worked for companies who needed a website or an Android application to improve their sales.</p>
+								<span class="image main"><img src="./assets/images/career_path.gif" alt="" /></span>
+									<p>In 2016, I completed two Master's Degrees in MIAGE (Business Informatics) and MBDS (Mobiquity, Web Development and Databases), from the Université Côte d'Azur. </p>
 
-								<p>Currently, I am working as a CRM Lead and ----------eer at Sopra Steria and am also stuyding for my Master's Degree in Computer Science. 
-								At Sopra Steria, I work for the biggest project of the company in the South of France which is a web application for a client to manage its users. The database used has millions of entries so the challenge of this app is to handle an important amount of data while still being fast and efficient.</p>
+									<p>I have spent five years at the University, studying, and also developing my skills as a freelance; I mostly worked for companies which needed a website or an Android application to improve their sales.</p>
+									<p>During this last year of studies, I also worked at Sopra Steria for the biggest project of this company, a web application to manage retirement processes in France. The database used had millions of entries so the challenge of this app was to handle an important amount of data while still being fast and efficient.</p>
 
-								<p>As I am soon going to graduate, I feel I am now ready for a challenging assignment. 
-								I am interested in exploring career opportunities in IT, specifically in sotfware engineering and Web / Mobile App Development and I would like to build a career that lets me focus on professional growth.</p>
+									<p> After having graduated, I wanted to start my career in a more dynamic city than Nice, so I decided to move to Paris and work in a startup : Reezocar.
+									There, I worked for 3 years building the CRM of the company from scratch and managing all the projects and staff working on it</p>
+
+									<p>I am interested in exploring career opportunities in IT, specifically in sotfware engineering and Web / Mobile App Development and I would like to build a career that lets me focus on professional growth.</p>
 							</article>
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<span class="image main"><img src="https://i.redd.it/izptoyn7i4uz.gif" alt="" /></span>
+								<span class="image main"><img src="./assets/images/contact.gif" alt="" /></span>
 
-								<form id="contact_form" method="post" action="mailto:emailtest@free.fr">
+								<form method="post" action="mailto:yoanet@gmail.com">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -141,11 +141,11 @@
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="https://twitter.com/myoann" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://facebook.com/ymoise" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://github.com/myoann" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://twitter.com/myoann" target=_blank class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://facebook.com/ymoise" target=_blank class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://github.com/myoann" target=_blank class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 									<li><a href="https://www.linkedin.com/in/yoannmoise" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
-									<li><a href="https://mailhide.io/e/Sdl6U"><span class="label">Instagram</span></a></li>	
+									<li><a href="https://mailhide.io/e/Sdl6U" target=_blank class="icon fa-envelope"><span class="label">Instagram</span></a></li>	
 								</ul>
 							</article>
 
@@ -404,39 +404,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<div id="bg"></div>
 
 		<!-- Scripts -->
+			<script type='text/javascript' src='config.js'></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://www.google.com/recaptcha/api.js?render=6LcZIrUUAAAAAOQnmzRueFyAHh7BbQvRoYnRWWEU"></script>
-			<script>
-			    // when form is submit
-				$('#contact_form').submit(function() {
-					// we stoped it
-			        event.preventDefault();
-			        var name = $('#name').val();
-			        var email = $('#email').val();
-			        var comment = $("#comment").val();
-				})
-				// needs for recaptcha ready
-				grecaptcha.ready(function() {
-					// do request for recaptcha token
-            		// response is promise with passed token
-					grecaptcha.execute('PRIVATEKEY', {action: 'homepage'}).then(function(token) {
-						
-						// add token to form
-		                $('#comment_form').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
-		                $.post("form.php",{email: email, comment: comment, token: token}, function(result) {
-		                	console.log(result);
-	                    	if(result.success) {
-	                        	alert('Thanks for posting comment.')
-	                        } else {
-	                        	alert('You are spammer ! Get the @$%K out.')
-	                        }
-
-					});
-				});
-			</script>
+			<script src="assets/js/main.js"></script>			
 	</body>
 </html>
