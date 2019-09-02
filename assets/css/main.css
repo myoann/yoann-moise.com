@@ -717,7 +717,16 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			.image.main {
-				margin: 1.5rem 0;
+				width: 92.8vw;
+				margin: -7.5rem -2.5rem 2.5rem -1.5rem;
+			}
+
+		}
+		@media screen and (max-width: 360px) {
+
+			.image.main {
+				/*width: 92.25vw;*/
+				margin: -7.5rem -2.5rem 2.5rem -1.5rem;
 			}
 
 		}
@@ -1284,8 +1293,6 @@ input, select, textarea {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid 1px #ffffff;
-			border-radius: 100%;
 		}
 
 			#header .logo .icon:before {
@@ -1316,6 +1323,8 @@ input, select, textarea {
 
 				#header .content .inner > :last-child {
 					margin-bottom: 0;
+					width: 67%;
+					margin: 0 auto;
 				}
 
 			#header .content p {
@@ -1650,6 +1659,14 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+.quote {
+	cursor: pointer;
+}
+
+.logo img {
+	filter: invert(1) contrast(500%);
+}
 
 #work_1 {
 }

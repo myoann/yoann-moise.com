@@ -4,6 +4,27 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+var quotes = [
+	"playing basketball with Mickael Jordan",
+	"drinking water on a rooftop in Paris",
+	"reading Harry Potter for the umpteenth time",
+	"writing a new funny joke on my Joke Book",
+	"talking with Donald Trump on the phone",
+	"playing FIFA during my flight from Dubai to Tokyo",
+	"eating world's best sushi at Sukiyabashi Jiro, Tokyo",
+	"having fun on Pong (1972 Atari)",
+	"juummppppiiiiinnnnnnggggggg off a cliff",
+	"feeding an ostrich",
+	"reading a fan letter",
+	"getting Hypnotized"
+];
+
+function newQuote() {
+	var randomNumber = Math.floor(Math.random() * (quotes.length));
+	$('#quote_display').html(quotes[randomNumber]);
+}
+
+
 (function($) {
 
 	var	$window = $(window),
@@ -27,6 +48,7 @@
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
+				newQuote();
 				$body.removeClass('is-preload');
 			}, 100);
 		});
