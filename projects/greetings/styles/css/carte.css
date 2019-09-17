@@ -1,0 +1,236 @@
+/* ----- HTML/BODY default----- */
+html,body{
+	margin:0px;
+	padding:0px;
+	border:0px;
+
+	overflow: hidden;
+	background-color:#000;
+}
+
+.ytplayer{
+	opacity:0;
+	width:0px;
+	height:0px;
+	visibility:hidden;
+}
+
+/* ----- BAS DE PAGE ----- */
+.posB{
+	opacity:0.7;
+	background-color:#000;
+	color:#fff;
+
+	font-family:segoe ui;
+	font-size:14px;
+
+	position:absolute;
+
+	right:0%;
+	left:0%;
+	bottom:0%;
+	
+	height:30px;
+	line-height:30px;
+
+	text-align:center;
+}
+
+/* ----- mainTitle ----- */
+.mainTitle{
+	z-index: -1;
+	opacity: 0.8;
+
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	left: 0%;
+	bottom: 0%;
+
+	height: 100%;
+}
+@font-face {
+    font-family: 'fontPerso';
+    src: url('fontPersoNoel/Flakes.ttf') format("truetype");
+}
+/* ----- mainTitle span ----- */
+.mainTitle span{
+	color: #fff;
+
+	font-family: "fontPerso";
+	/*font-family: segoe ui;*/
+	font-variant: small-caps;
+	font-size: 150px;
+
+	text-align: center;
+
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	left: 0%;
+
+	height: 176px;
+	margin-top: -88px;
+}
+/* ----- IMG ----- */
+.img{
+	display: none;
+	position:absolute;
+
+	top:0%;
+	left:0%;
+	bottom:0%;
+	right:0%;
+
+	width:100%;
+	height:100%;
+
+	box-shadow: 0px 0px 100px #fff;
+    animation:imgZoom 4s linear;
+    -webkit-animation:imgZoom 4s linear;  
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes imgZoom
+{  
+	from {
+		transform:scale(0);
+		-o-transform:scale(0); /* Opera */
+		-moz-transform:scale(0); /* Firefox */
+		-ms-transform:scale(0); /* IE 9 */
+		-webkit-transform:scale(0); /* Safari and Chrome */
+    }
+    to {
+		transform:scale(1);
+		-o-transform:scale(1); /* Opera */
+		-moz-transform:scale(1); /* Firefox */
+		-ms-transform:scale(1); /* IE 9 */
+		-webkit-transform:scale(1); /* Safari and Chrome */
+    }
+}
+
+@-webkit-keyframes imgZoom
+{
+    from {
+		transform:scale(0);
+		-o-transform:scale(0); /* Opera */
+		-moz-transform:scale(0); /* Firefox */
+		-ms-transform:scale(0); /* IE 9 */
+		-webkit-transform:scale(0); /* Safari and Chrome */
+    }
+    to {
+		transform:scale(1);
+		-o-transform:scale(1); /* Opera */
+		-moz-transform:scale(1); /* Firefox */
+		-ms-transform:scale(1); /* IE 9 */
+		-webkit-transform:scale(1); /* Safari and Chrome */
+    }
+}
+
+/* ----- TXT ----- */
+.txt{
+	display: none;
+	color: gold;
+	text-shadow: 2px 2px 12px #000;
+
+	font-family: segoe ui;
+	font-variant: small-caps;
+
+	position: absolute;
+
+	right: 0%;
+	left:0%;
+
+	text-align:center;
+    animation:txtgZoom 1s linear;
+    -webkit-animation:txtgZoom 1s linear;  
+   	-webkit-animation-fill-mode: forwards;
+}
+@keyframes txtgZoom
+{
+   from {
+       
+		transform:scale(1.5) rotateX(360deg);
+		-o-transform:scale(1.5) rotateX(360deg); /* Opera */
+		-moz-transform:scale(1.5) rotateX(360deg); /* Firefox */
+		-ms-transform:scale(1.5) rotateX(360deg); /* IE 9 */
+		-webkit-transform:scale(1.5) rotateX(360deg); /* Safari and Chrome */
+		top:20%;
+    }
+    to {
+		transform:scale(1) rotateX(0deg);
+		-o-transform:scale(1) rotateX(0deg); /* Opera */
+		-moz-transform:scale(1) rotateX(0deg); /* Firefox */
+		-ms-transform:scale(1) rotateX(0deg); /* IE 9 */
+		-webkit-transform:scale(1) rotateX(0deg); /* Safari and Chrome */
+		top:0%;
+    }
+}
+@-webkit-keyframes txtgZoom
+{
+   from {
+		transform:scale(1.5) rotateX(360deg);
+		-o-transform:scale(1.5) rotateX(360deg); /* Opera */
+		-moz-transform:scale(1.5) rotateX(360deg); /* Firefox */
+		-ms-transform:scale(1.5) rotateX(360deg); /* IE 9 */
+		-webkit-transform:scale(1.5) rotateX(360deg); /* Safari and Chrome */
+		top:20%;
+    }
+    to {
+		transform:scale(1) rotateX(0deg);
+		-o-transform:scale(1) rotateX(0deg); /* Opera */
+		-moz-transform:scale(1) rotateX(0deg); /* Firefox */
+		-ms-transform:scale(1) rotateX(0deg); /* IE 9 */
+		-webkit-transform:scale(1) rotateX(0deg); /* Safari and Chrome */
+		top:0%;
+    }
+}
+@font-face {
+    font-family: 'fontPersoTxt';
+    src: url('fontPersoNoel/stonehen.ttf') format("truetype");
+}
+/* - title */
+.title{	
+	font-family: "fontPersoTxt";
+	/*font-family: segoe ui;*/
+	font-size: 90px; 
+}
+/* - msg */
+.msg{ font-size: 50px;}
+
+/* --- posLink --- */
+div#posLink{
+	color:#fff;
+
+	z-index:999; 
+	position:fixed; 
+
+	bottom:1%; 
+	right:1%; 
+
+	font-family:segoe ui; 
+	font-size:15px; 
+}
+div#posLink a{
+	text-decoration:none; 
+	color:#fff;
+}
+
+/* --- posSocial --- */
+.posSocial{
+	display:none;
+	z-index: 99;
+
+	background-color: #fff;
+	box-shadow: 0px 0px 40px #fff;
+
+	position: absolute;
+	top: 0px;
+	right: 0px;
+
+	width:130px;
+
+	padding: 5px;
+	margin: 0px;
+	border: 0px;
+}

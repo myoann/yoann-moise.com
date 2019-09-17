@@ -1,0 +1,130 @@
+/* --- html, body --- */
+html, body {
+	background-color:lightgray;
+	color:#fff;
+
+	padding:0%;
+	margin:0%;
+	border:0%;
+	overflow:hidden;
+}
+
+/* --- * = all --- */
+*{ font-family:segoe ui;}
+
+/* --- img --- */
+img:hover{
+	box-shadow:0px 0px 50px gold;
+}
+img {
+	opacity: 0.9;
+	box-shadow:0px 0px 50px #444, 5px 5px 10px #000;
+	border: 1px solid #fff;
+}
+
+/* --- input#name --- */
+input#name {
+	padding:4px 8px;
+	border:0px;
+
+	font-size:16px;
+}
+
+/* --- button --- */
+button:hover { background-color:orangered; }
+button:active {	box-shadow:inset 0px 0px 10px #000; }
+button{
+	background-color:green;
+	color:#fff;
+
+	border:0px;
+	padding:5px 20px;
+
+	font-size:14px;
+
+	cursor:pointer;
+}
+/* --- gallery --- */
+.gallery{
+	display: none;
+
+	width:800px; 
+	height:500px;
+}
+
+/* --- posB --- */
+div#posB {
+	display: none;
+
+	z-index:999;
+	opacity:0.8;
+
+	background-color:#222;
+	color:#fff;
+
+	position:fixed;
+	bottom:0%;
+	left:0%;
+	right:0%;
+
+	padding:2%;
+	text-align: center;
+}
+
+/* --- posLink --- */
+div#posLink{
+	display: none;
+	
+	color:#fff;
+	
+	z-index:999; 
+	position:fixed; 
+
+	bottom:1%; 
+	right:1%; 
+
+	font-family:segoe ui; 
+	font-size:15px; 
+}
+div#posLink a{
+	text-decoration:none; 
+	color:#fff;
+}
+
+/* --- posH --- */
+div#posH{
+	display: none;
+	/*background-color:#fff;*/
+	position:absolute;
+
+	top:0%;
+	right:0%;
+	left:0%;
+
+	padding: 5%;
+}
+/* --- #titre, #sous-titre --- */
+#titre,#sous-titre{
+	position:absolute;
+
+	right:0%;
+	left:0%;
+
+	text-align:center;
+}
+#titre {
+	bottom:40%;
+
+	color:#888;
+	text-shadow:0px 1px 1px black;
+
+	font-size:2.5em;
+}
+#sous-titre {
+	bottom:2%;
+
+	color:#777;
+	text-shadow:0px 1px 0px #fff;
+
+	font-size:1.2em;
+}

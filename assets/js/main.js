@@ -352,6 +352,7 @@ function newQuote() {
 
 			});
 
+
 			$window.on('keyup', function(event) {
 
 				switch (event.keyCode) {
