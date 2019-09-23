@@ -27,14 +27,17 @@ function newQuote() {
 
 (function($) {
 
+
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
 		$header = $('#header'),
 		$footer = $('#footer'),
 		$main = $('#main'),
-		$main_articles = $main.children('article');
-
+		$projects = $('#projects'),
+		$main_children = $main.children(),
+		$projects_children = $projects.children(),
+		$main_articles = $main_children.add($projects_children);
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -75,6 +78,9 @@ function newQuote() {
 
 		}
 
+console.log($main_children);
+console.log($projects_children);
+console.log($main_articles);
 	// Nav.
 		var $nav = $header.children('nav'),
 			$nav_li = $nav.find('li');
@@ -95,6 +101,8 @@ function newQuote() {
 			$main._show = function(id, initial) {
 
 				var $article = $main_articles.filter('#' + id);
+				var $is_project = id.includes('work');
+				console.log($is_project);
 
 				// No such article? Bail.
 					if ($article.length == 0)
@@ -124,9 +132,11 @@ function newQuote() {
 							// Show main, article.
 								$main.show();
 								$article.show();
+								if ($is_project) $('#projects').show();
 
 							// Activate article.
 								$article.addClass('active');
+								if ($is_project) $('#projects').addClass('active');
 
 							// Add a specific class to the background
 								$("#bg").addClass(`bg_${id}`);
@@ -165,11 +175,16 @@ function newQuote() {
 
 								// Show article.
 									$article.show();
+									if ($is_project) $('#projects').show();
 
 								// Activate article.
 									setTimeout(function() {
 
 										$article.addClass('active');
+										if ($is_project) $('#projects').addClass('active');
+
+										// Add a specific class to the background
+										$("#bg").addClass(`bg_${id}`);
 
 										// Window stuff.
 											$window
@@ -204,11 +219,18 @@ function newQuote() {
 								// Show main, article.
 									$main.show();
 									$article.show();
+									if ($is_project) $('#projects').show();
+
 
 								// Activate article.
 									setTimeout(function() {
 
 										$article.addClass('active');
+										if ($is_project) $('#projects').addClass('active');
+
+										// Add a specific class to the background
+										$("#bg").addClass(`bg_${id}`);
+
 
 										// Window stuff.
 											$window

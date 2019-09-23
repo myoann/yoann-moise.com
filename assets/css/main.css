@@ -696,7 +696,6 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			width: 40rem;
 			z-index: -1;
 			margin: -9.2rem -2.5rem 2.5rem -2.5rem;
 
@@ -1532,7 +1531,7 @@ input, select, textarea {
 	}
 
 
-		#main article {
+		article {
 			-moz-transform: translateY(0.25rem);
 			-webkit-transform: translateY(0.25rem);
 			-ms-transform: translateY(0.25rem);
@@ -1550,7 +1549,11 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-			#main article.active {
+		article.owl-carousel {
+			background-color: transparent;
+		}
+
+			article.active {
 				-moz-transform: translateY(0);
 				-webkit-transform: translateY(0);
 				-ms-transform: translateY(0);
@@ -1558,7 +1561,7 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-			#main article .close {
+			article .close {
 				display: block;
 				position: absolute;
 				top: 0;
@@ -1571,7 +1574,7 @@ input, select, textarea {
 				white-space: nowrap;
 			}
 
-				#main article .close:before {
+				article .close:before {
 					-moz-transition: background-color 0.2s ease-in-out;
 					-webkit-transition: background-color 0.2s ease-in-out;
 					-ms-transition: background-color 0.2s ease-in-out;
@@ -1590,21 +1593,21 @@ input, select, textarea {
 					background-repeat: no-repeat;
 				}
 
-				#main article .close:hover:before {
+				article .close:hover:before {
 					background-color: rgba(255, 255, 255, 0.075);
 				}
 
-				#main article .close:active:before {
+				article .close:active:before {
 					background-color: rgba(255, 255, 255, 0.175);
 				}
 
 		@media screen and (max-width:736px){
 
-			#main article {
+			article {
 				padding: 3.5rem 2rem 0.5rem 2rem ;
 			}
 
-				#main article .close:before {
+				article .close:before {
 					top:.875rem;
 					left:.875rem;
 					width: 2.25rem;
@@ -1616,7 +1619,7 @@ input, select, textarea {
 
 		@media screen and (max-width:480px){
 
-			#main article {
+			article {
 				padding: 3rem 1.5rem 0.5rem 1.5rem ;
 			}
 
@@ -1689,6 +1692,7 @@ input, select, textarea {
 
 
 #work_1, #work_2, #work_3, #work_4, #work_5, #work_6, #work_7, #work_8, #work_9 {
+	margin: 0 auto;
 	background-color: rgba(255, 255, 255, 0.85) !important;
 	color: black !important;
 }
@@ -1745,3 +1749,71 @@ input, select, textarea {
 .arrow_icon:before {
 	display: initial;
 }
+
+
+
+/* Override Carousel CSS*/
+.carousel-wrap {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+  .owl-carousel .owl-nav{
+    overflow: hidden;
+    height: 0px;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, 
+  .owl-theme .owl-dots .owl-dot:hover span {
+      background: #2caae1;
+  }
+
+
+  .owl-carousel .item {
+      text-align: center;
+  }
+  .owl-carousel .nav-btn{
+      height: 47px;
+      position: absolute;
+      width: 26px;
+      cursor: pointer;
+      top: 100px !important;
+  }
+
+  .owl-carousel .owl-prev.disabled,
+  .owl-carousel .owl-next.disabled{
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .owl-carousel .prev-slide{
+      background: url(nav-icon.png) no-repeat scroll 0 0;
+      left: -33px;
+  }
+  .owl-carousel .next-slide{
+      background: url(nav-icon.png) no-repeat scroll -24px 0px;
+      right: -33px;
+  }
+  .owl-carousel .prev-slide:hover{
+     background-position: 0px -53px;
+  }
+  .owl-carousel .next-slide:hover{
+    background-position: -24px -53px;
+  }
+
+  span.img-text {
+    text-decoration: none;
+    outline: none;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    cursor: pointer;
+    width: 100%;
+    font-size: 23px;
+    display: block;
+    text-transform: capitalize;
+  }
+  span.img-text:hover {
+    color: #2caae1;
+  }

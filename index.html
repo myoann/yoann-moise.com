@@ -5,6 +5,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="assets/css//owl.theme.default.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -43,7 +45,7 @@
 					</header>
 
 				<!-- Main -->
-					<div id="main">
+					<div id="main" class="carousel-wrap">
 
 						<!-- Intro Yoann Moise -->
 							<article id="intro">
@@ -71,154 +73,155 @@
 								<a href="#" class="arrow_icon icon solid fa-chevron-right"></a>
 							</span>
 
-							<article id="work_1">
-								<span class="image main"><img src="assets/images/projects/pnb.jpg" loading="lazy" alt="Basketball application image" /></span>
+							<article class="owl-carousel owl-theme" id="projects">
+								<article id="work_1" class="item" data-hash="work_1">
+									<span class="image main"><img src="assets/images/projects/pnb.jpg" loading="lazy" alt="Basketball application image" /></span>
 
-								<h4 class="major">Basketball app to find players around you and organize a game</h4>
+									<h4 class="major">Basketball app to find players around you and organize a game</h4>
 
-								<p>
-									We developed Android / iOS / Web apps for a startup which goal was to create an app for basketballers. 
-									<br /> <br />
-									On the app, you can see fields around you, planned games and joined a game or create a game and ask for other potential players to join you.
-								</p>
+									<p>
+										We developed Android / iOS / Web apps for a startup which goal was to create an app for basketballers. 
+										<br /> <br />
+										On the app, you can see fields around you, planned games and joined a game or create a game and ask for other potential players to join you.
+									</p>
 
-								<br />
+									<br />
+								</article>
+
+								<article id="work_2" class="item" data-hash="work_2">
+									<span class="image main"><img src="assets/images/projects/shummy.jpg" loading="lazy" alt="Shummy image" /></span>
+
+									<h4 class="major">Shummy is a food sharing project developed during the European Innovation Academy, an international summer school.</h4>
+
+									<p>
+										The goal of Shummy, as we planned it, for its users is to:
+										<ul>
+											<li>Offer meals and manage them on the go using your mobile</li>
+											<li>Search for meals</li>
+											<li>See cookers’ and eaters’ profiles and ratings</li>
+											<li>Reserve your meal directly</li>
+										</ul>
+									</p>
+
+									<a href="/projects/shummy/index.php" target="_blank" class="call_to_action_button">DISCOVER</a>
+									<br />
+								</article>
+
+								<article id="work_3" class="item" data-hash="work_3">
+									<span class="image main"><img src="assets/images/projects/greeting_cards.jpg" loading="lazy" alt="Online Greeting Cards' image of the website" /></span>
+
+									<h4 class="major">Online Greeting Cards, made for those who like to share life's little pleasures or want to thank other people funnily.</h4>
+
+									<p>
+										With the current version, you can send an online greeting card to someone you like for a special event. 
+										<br /> <br />
+										Choose a type of greeting car, enter the recipient's name (his / her name will be displayed) and share the link for your friend to enjoy it! =)
+									</p>
+
+									<a href="/projects/greetings/index.php" target="_blank" class="call_to_action_button">DISCOVER</a>
+									<br />
+								</article>
+
+
+								<article id="work_4" class="item" data-hash="work_4">
+									<span class="image main"><img src="assets/images/projects/smarthealth_red.jpg" loading="lazy" alt="Smartwatch Application image" /></span>
+
+									<h4 class="major">Watch My Health is a smartwatch app, a smartphone app and web app made to support you during every moment of your health journey</h4>
+
+									<p>
+										We worked on the first Wear OS Application that lets you track multiple physical activities such as the heart rate and the number of steps. 
+										<br /> <br />
+										The Android app connected to it lets the user see the live tracked elements linked to the location (based on smartphone's GPS) and the history of what was previously tracked. 
+										<br /> <br />
+										Finally, the web app was made to see graphics and better see the evolution of the user day by day and compare it with other users using the platform.
+									</p>
+
+									<a href="https://github.com/myoann/SmartHealth---Android-App" target="_blank" rel="noopener" class="call_to_action_button">CHECK IT OUT ON GITHUB</a>
+									<br />
+								</article>
+
+								<article id="work_5" class="item" data-hash="work_5">
+									<span class="image main"><img src="assets/images/projects/cube.jpg" loading="lazy" alt="Animated 3D Cube image" /></span>
+
+									<h4 class="major">Animated 3D cube with HTML and CSS only</h4>
+
+									<p>
+										I wanted to try CSS3 new features and build a cube in 3D with interactions without using any JavaScript. 
+										<br /> <br />
+										The first step is to constitute the cube from differents layers and then makes it rotate on itself. 
+										<br /> <br />
+										On mouse over the cube, the cube expands while continuing its rotation in a fluid way.
+									</p>
+
+									<a href="projects/cube/index.html" target="_blank" class="call_to_action_button">DISCOVER</a>
+									<br />
+								</article>
+
+								<article id="work_6" class="item" data-hash="work_6">
+									<span class="image main"><img src="assets/images/projects/videos_player.jpg" loading="lazy" alt="Videos player image" /></span>
+
+									<h4 class="major">Pleasant and simple to use video player</h4>
+
+									<p>
+										I wanted to re-think the folders/files design such as we use it everyday on our computers and wanted to make something pleasant to use. 
+										<br /> <br />
+										On this example, I used 4 categories (folders) having 6 videos (files) each. 
+										<br /> <br />
+										These videos launch on a web player I developed specifically for this project to be complete.
+									</p>
+
+									<a href="https://myoann-videos-player.netlify.com" target="_blank" rel="noopener" class="call_to_action_button">DISCOVER</a>
+									<br />
+								</article>
+
+								<article id="work_7" class="item" data-hash="work_7">
+									<span class="image main"><img src="assets/images/projects/lifi.jpg" loading="lazy" alt="Android application with LiFi image" /></span>
+
+									<h4 class="major">Android application working with LiFi made for the International Perfume Museum of Grasse</h4>
+
+									<p>
+										With other software engineers from the University, we created an Android application for a Museum in France. 
+										<br /> <br />
+										This application works with LiFi, which means that, when a user is near an artpiece, the description, photos and videos of this artpiece is displayed directly on his smartphone. 
+										<br /> <br />
+										The data is sent through LiFi directly to the smartphone app which interprets the data and display everything to know about the specific artpiece.
+									</p>
+
+									<a href="https://github.com/myoann/LiFi-museum" target="_blank" rel="noopener" class="call_to_action_button">CHECK IT OUT ON GITHUB</a>
+									<br />
+								</article>
+
+								<article id="work_8" class="item" data-hash="work_8">
+									<span class="image main"><img src="assets/images/projects/blog_ws.jpg" loading="lazy" alt="Micro Blogging App image" /></span>
+
+									<h4 class="major">A Micro Blogging App for those who enjoy writing news</h4>
+
+									<p>
+										This website was made with JavaEE using Web Services REST Jersey and its purpose is to let anyone creates its own blog. 
+										<br /> <br />
+										An administrator is allowed to create new content or modify / delete existing articles while a simple user can only consult the blog articles.
+									</p>
+
+									<a href="https://github.com/mf001574/BlogWebServiceHTML5" target="_blank" rel="noopener" class="call_to_action_button">CHECK IT OUT ON GITHUB</a>
+									<br />
+								</article>
+
+								<article id="work_9" class="item" data-hash="work_9">
+									<h2 class="major">Banking App</h2>
+									<span class="image main"><img src="assets/images/projects/banking.jpg" loading="lazy" alt="Banking App image" /></span>
+
+									<h4 class="major">A banking app where the user can manage a list of its clients, money transactions, transfers, financial operations</h4>
+
+									<p>
+										The goal was to implement an autonomous and international banking application in JavaEE and connected to a database. 
+										<br /> <br />
+										It was built for a course at the University.
+									</p>
+
+									<a href="https://github.com/myoann/GestionBanqueJEE" target="_blank" rel="noopener" class="call_to_action_button">CHECK IT OUT ON GITHUB</a>
+									<br />
+								</article>
 							</article>
-
-							<article id="work_2">
-								<span class="image main"><img src="assets/images/projects/shummy.jpg" loading="lazy" alt="Shummy image" /></span>
-
-								<h4 class="major">Shummy is a food sharing project developed during the European Innovation Academy, an international summer school.</h4>
-
-								<p>
-									The goal of Shummy, as we planned it, for its users is to:
-									<ul>
-										<li>Offer meals and manage them on the go using your mobile</li>
-										<li>Search for meals</li>
-										<li>See cookers’ and eaters’ profiles and ratings</li>
-										<li>Reserve your meal directly</li>
-									</ul>
-								</p>
-
-								<a href="/projects/shummy/index.php" target="_blank" class="call_to_action_button">DISCOVER</a>
-								<br />
-							</article>
-
-							<article id="work_3">
-								<span class="image main"><img src="assets/images/projects/greeting_cards.jpg" loading="lazy" alt="Online Greeting Cards' image of the website" /></span>
-
-								<h4 class="major">Online Greeting Cards, made for those who like to share life's little pleasures or want to thank other people funnily.</h4>
-
-								<p>
-									With the current version, you can send an online greeting card to someone you like for a special event. 
-									<br /> <br />
-									Choose a type of greeting car, enter the recipient's name (his / her name will be displayed) and share the link for your friend to enjoy it! =)
-								</p>
-
-								<a href="/projects/greetings/index.php" target="_blank" class="call_to_action_button">DISCOVER</a>
-								<br />
-							</article>
-
-
-							<article id="work_4">
-								<span class="image main"><img src="assets/images/projects/smarthealth_red.jpg" loading="lazy" alt="Smartwatch Application image" /></span>
-
-								<h4 class="major">Watch My Health is a smartwatch app, a smartphone app and web app made to support you during every moment of your health journey</h4>
-
-								<p>
-									We worked on the first Wear OS Application that lets you track multiple physical activities such as the heart rate and the number of steps. 
-									<br /> <br />
-									The Android app connected to it lets the user see the live tracked elements linked to the location (based on smartphone's GPS) and the history of what was previously tracked. 
-									<br /> <br />
-									Finally, the web app was made to see graphics and better see the evolution of the user day by day and compare it with other users using the platform.
-								</p>
-
-								<a href="https://github.com/myoann/SmartHealth---Android-App" target="_blank" rel="noopener" class="call_to_action_button">CHECK IT OUT ON GITHUB</a>
-								<br />
-							</article>
-
-							<article id="work_5">
-								<span class="image main"><img src="assets/images/projects/cube.jpg" loading="lazy" alt="Animated 3D Cube image" /></span>
-
-								<h4 class="major">Animated 3D cube with HTML and CSS only</h4>
-
-								<p>
-									I wanted to try CSS3 new features and build a cube in 3D with interactions without using any JavaScript. 
-									<br /> <br />
-									The first step is to constitute the cube from differents layers and then makes it rotate on itself. 
-									<br /> <br />
-									On mouse over the cube, the cube expands while continuing its rotation in a fluid way.
-								</p>
-
-								<a href="projects/cube/index.html" target="_blank" class="call_to_action_button">DISCOVER</a>
-								<br />
-							</article>
-
-							<article id="work_6">
-								<span class="image main"><img src="assets/images/projects/videos_player.jpg" loading="lazy" alt="Videos player image" /></span>
-
-								<h4 class="major">Pleasant and simple to use video player</h4>
-
-								<p>
-									I wanted to re-think the folders/files design such as we use it everyday on our computers and wanted to make something pleasant to use. 
-									<br /> <br />
-									On this example, I used 4 categories (folders) having 6 videos (files) each. 
-									<br /> <br />
-									These videos launch on a web player I developed specifically for this project to be complete.
-								</p>
-
-								<a href="https://myoann-videos-player.netlify.com" target="_blank" rel="noopener" class="call_to_action_button">DISCOVER</a>
-								<br />
-							</article>
-
-							<article id="work_7">
-								<span class="image main"><img src="assets/images/projects/lifi.jpg" loading="lazy" alt="Android application with LiFi image" /></span>
-
-								<h4 class="major">Android application working with LiFi made for the International Perfume Museum of Grasse</h4>
-
-								<p>
-									With other software engineers from the University, we created an Android application for a Museum in France. 
-									<br /> <br />
-									This application works with LiFi, which means that, when a user is near an artpiece, the description, photos and videos of this artpiece is displayed directly on his smartphone. 
-									<br /> <br />
-									The data is sent through LiFi directly to the smartphone app which interprets the data and display everything to know about the specific artpiece.
-								</p>
-
-								<a href="https://github.com/myoann/LiFi-museum" target="_blank" rel="noopener" class="call_to_action_button">CHECK IT OUT ON GITHUB</a>
-								<br />
-							</article>
-
-							<article id="work_8">
-								<span class="image main"><img src="assets/images/projects/blog_ws.jpg" loading="lazy" alt="Micro Blogging App image" /></span>
-
-								<h4 class="major">A Micro Blogging App for those who enjoy writing news</h4>
-
-								<p>
-									This website was made with JavaEE using Web Services REST Jersey and its purpose is to let anyone creates its own blog. 
-									<br /> <br />
-									An administrator is allowed to create new content or modify / delete existing articles while a simple user can only consult the blog articles.
-								</p>
-
-								<a href="https://github.com/mf001574/BlogWebServiceHTML5" target="_blank" rel="noopener" class="call_to_action_button">CHECK IT OUT ON GITHUB</a>
-								<br />
-							</article>
-
-							<article id="work_9">
-								<h2 class="major">Banking App</h2>
-								<span class="image main"><img src="assets/images/projects/banking.jpg" loading="lazy" alt="Banking App image" /></span>
-
-								<h4 class="major">A banking app where the user can manage a list of its clients, money transactions, transfers, financial operations</h4>
-
-								<p>
-									The goal was to implement an autonomous and international banking application in JavaEE and connected to a database. 
-									<br /> <br />
-									It was built for a course at the University.
-								</p>
-
-								<a href="https://github.com/myoann/GestionBanqueJEE" target="_blank" rel="noopener" class="call_to_action_button">CHECK IT OUT ON GITHUB</a>
-								<br />
-							</article>
-
 
 						<!-- About Yoann Moise -->
 							<article id="about">
@@ -287,6 +290,22 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>			
+			<script src="assets/js/main.js"></script>		
+			<script src="assets/js/owl.carousel.min.js"></script>	
+			<script type="text/javascript">
+				$(document).ready(function(){
+				  $(".owl-carousel").owlCarousel({
+				        items:1,
+				        loop:false,
+			            nav:true,
+                        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+				        center:true,
+				        margin:10,
+				        URLhashListener:true,
+				        autoplayHoverPause:true,
+				        startPosition: 'URLHash'
+				    });
+				});
+			</script>
 	</body>
 </html>
