@@ -1768,6 +1768,10 @@ input, select, textarea {
       background: #2caae1;
   }
 
+  .owl-theme .owl-dots .owl-dot {
+		box-shadow: none;
+  }
+
 
   .owl-carousel .item {
       text-align: center;
