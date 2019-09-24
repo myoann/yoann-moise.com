@@ -695,14 +695,23 @@ input, select, textarea {
 			}
 
 		.image.main {
-			display: block;
 			z-index: -1;
-			margin: -9.2rem -2.5rem 2.5rem -2.5rem;
+			position: absolute;
+			top: 0;
+			left: 0;
 
+		}
+
+		.spacer {
+			height: 300px;
+			margin: 0 0 -50px 0;
+			background: transparent;
 		}
 
 			.image.main img {
 				width: 100%;
+				max-height: 300px; 
+				object-fit: cover;
 			}
 
 		@media screen and (max-width:736px){
