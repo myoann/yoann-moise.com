@@ -347,7 +347,7 @@ console.log($main_articles);
 			};
 
 		// Articles.
-			$main_articles.each(function() {
+			$projects_children.each(function() {
 
 				var $this = $(this);
 
