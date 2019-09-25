@@ -702,6 +702,11 @@ input, select, textarea {
 
 		}
 
+		.image.main:before {
+			background-image: none;
+			background-color: transparent;
+		}
+
 		.spacer {
 			height: 300px;
 			margin: 0 0 -50px 0;
