@@ -728,24 +728,11 @@ input, select, textarea {
 
 		@media screen and (max-width:736px){
 
-			.image.main {
-				margin: 2rem 0;
+			.spacer {
+				height: 275px;
 			}
-
-		}
-
-		@media screen and (max-width:480px){
-
-			.image.main {
-				width: 92.8vw;
-				margin: -7.5rem -2.5rem 2.5rem -1.5rem;
-			}
-
-		}
-		@media screen and (max-width: 360px){
-
-			.image.main {
-				margin: -7.5rem -2.5rem 2.5rem -1.5rem;
+			.call_to_action_button {
+				margin-bottom: 15px;
 			}
 
 		}
