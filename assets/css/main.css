@@ -1586,6 +1586,8 @@ input, select, textarea {
 				text-indent: 4rem;
 				overflow: hidden;
 				white-space: nowrap;
+				width: auto;
+				color: #fff;
 			}
 
 				article .close:before {
