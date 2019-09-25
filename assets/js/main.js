@@ -78,9 +78,6 @@ function newQuote() {
 
 		}
 
-console.log($main_children);
-console.log($projects_children);
-console.log($main_articles);
 	// Nav.
 		var $nav = $header.children('nav'),
 			$nav_li = $nav.find('li');
@@ -102,7 +99,6 @@ console.log($main_articles);
 
 				var $article = $main_articles.filter('#' + id);
 				var $is_project = id.includes('work');
-				console.log($is_project);
 
 				// No such article? Bail.
 					if ($article.length == 0)
