@@ -1305,13 +1305,19 @@ input, select, textarea {
 			line-height: 5.5rem;
 		}
 
-		.profile_picture {
+		.upper_image_ym {
 			position: absolute;
+			border-bottom-style: none;
 			width: 50px;
 			height: 50px;
-			z-index: 2;
+			z-index: 1000;
 			top: 4%;
 			right: 2%;
+		}
+
+		.upper_image_ym img {
+			width: 50px;
+			height: 50px;
 			object-fit: cover;
 			border-radius: 50%;
 		}
