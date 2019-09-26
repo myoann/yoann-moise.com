@@ -1295,15 +1295,21 @@ input, select, textarea {
 				display: none;
 			}
 
-		#header .logo {
+		#header .header_image {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
 		}
 
-			#header .logo .icon:before {
-				font-size: 2rem;
-			}
+		#header .header_image .profile_picture {
+			opacity:0.5;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+
+		#header .header_image .logo  {
+			filter: invert(1) contrast(500%);
+		}
 
 		#header .content {
 			border-style: solid;
@@ -1444,15 +1450,11 @@ input, select, textarea {
 					height: calc(2rem + 1px);
 				}
 
-			#header .logo {
+			#header .header_image img {
 				width: 4.75rem;
 				height: 4.75rem;
 				line-height: 4.75rem;
 			}
-
-				#header .logo .icon:before {
-					font-size: 1.75rem;
-				}
 
 			#header .content .inner {
 				padding: 2.5rem 1rem;
@@ -1672,10 +1674,6 @@ input, select, textarea {
 
 .quote {
 	cursor: pointer;
-}
-
-.logo img {
-	filter: invert(1) contrast(500%);
 }
 
 .call_to_action_button {
