@@ -727,9 +727,11 @@ input, select, textarea {
 			}
 
 		@media screen and (max-width:736px){
-
+			.owl-carousel .owl-item img {
+				height: 200px;
+			}
 			.spacer {
-				height: 275px;
+				height: 225px;
 			}
 			.call_to_action_button {
 				margin-bottom: 15px;
@@ -1618,7 +1620,7 @@ input, select, textarea {
 					border-radius: 100%;
 					background-position: center;
 					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
-					background-size: 20px 20px;
+					background-size: 25px 25px;
 					background-repeat: no-repeat;
 				}
 
@@ -1636,12 +1638,17 @@ input, select, textarea {
 				padding: 3.5rem 2rem 0.5rem 2rem ;
 			}
 
+			article .close {
+				top: -7px;
+				right: -7px;
+			}
+
 				article .close:before {
 					top:.875rem;
 					left:.875rem;
 					width: 2.25rem;
 					height: 2.25rem;
-					background-size: 14px 14px;
+					background-size: 20px 20px;
 				}
 
 		}
