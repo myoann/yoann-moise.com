@@ -247,7 +247,6 @@ function newQuote() {
 			};
 
 			$main._hide = function(addState) {
-
 				var $article = $main_articles.filter('.active');
 
 				// Article not visible? Bail.
@@ -363,9 +362,8 @@ function newQuote() {
 
 		// Events.
 			$body.on('click', function(event) {
-
 				// Article visible? Hide.
-					if ($body.hasClass('is-article-visible'))
+					if ($body.hasClass('is-article-visible') && !['owl-nav', 'owl-next', 'owl-next disabled', 'owl-prev', 'owl-prev disabled', 'owl-dot active'].includes(event.target.parentNode.className))
 						$main._hide(true);
 
 			});
