@@ -24,8 +24,7 @@
       color: #FFF;
       text-decoration: none; }
   .owl-theme .owl-nav .disabled {
-    opacity: 0.5;
-    cursor: default; }
+    display: none; }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
   margin-top: 10px; }

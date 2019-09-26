@@ -1803,6 +1803,29 @@ input, select, textarea {
 	float: right;
   }
 
+  @media screen and (max-width:736px){
+	.owl-carousel .owl-nav {
+		top: unset;
+		bottom: -1%;
+		z-index: 1000;
+	}
+	.owl-dots {
+		opacity: 0;
+	}
+	.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+		box-shadow: none;
+	}
+	.owl-carousel .owl-nav button.owl-prev .fa, .owl-carousel .owl-nav button.owl-next .fa {
+		display: none;
+	}
+	.owl-carousel .owl-nav button.owl-prev:after {
+		content: "Previous";
+	}
+	.owl-carousel .owl-nav button.owl-next:after {
+		content: "Next";
+	}
+  }
+
   .owl-theme .owl-dots .owl-dot.active span, 
   .owl-theme .owl-dots .owl-dot:hover span {
       background: #2caae1;
