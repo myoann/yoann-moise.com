@@ -1305,11 +1305,13 @@ input, select, textarea {
 			line-height: 5.5rem;
 		}
 
-		#header .header_image .profile_picture {
-			display: none;
-			/*position: absolute;
-			top: 0;
-			left: 0;*/
+		.profile_picture {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			z-index: 2;
+			top: 4%;
+			right: 2%;
 			object-fit: cover;
 			border-radius: 50%;
 		}
@@ -1317,15 +1319,6 @@ input, select, textarea {
 		#header .header_image {
   			display: block;
 		}
-
-		#header .header_image:hover .logo {
-			display: none;
-			opacity: 0;
-		}
-		#header .header_image:hover .profile_picture {
-			display: block;
-		}
-
 
 		#header .header_image .logo  {
 			filter: invert(1) contrast(500%);
