@@ -231,7 +231,7 @@
 								<h2 class="major">Contact</h2>
 								<span class="image main"><img src="./assets/images/contact.gif" loading="lazy" alt="Contact Yoann Moise GIF" /></span>
 
-								<form method="post" action="#">
+								<form method="post" id="mycontactform" >
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -247,7 +247,8 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="submit" id="submit" name="submit" value="Send Message" class="primary" /></li>
+										<div id="success" style="color:red;"></div>
 									</ul>
 								</form>
 
@@ -280,7 +281,7 @@
 			<script src="assets/js/owl.carousel.min.js"></script>	
 			<script type="text/javascript">
 				$(document).ready(function(){
-				  $(".owl-carousel").owlCarousel({
+				 	$(".owl-carousel").owlCarousel({
 				        items:1,
 				        loop:false,
 			            nav:true,
@@ -290,6 +291,14 @@
 				        URLhashListener:true,
 				        startPosition: 'URLHash'
 					});
+
+				  	$('#submit').click(function(){		
+						$.post("send.php", $("#mycontactform").serialize(),  function(response) {
+							alert("allez la !")
+							$('#success').html(response);
+						});
+						return false;
+					});		 
 				});
 			</script>
 	</body>
