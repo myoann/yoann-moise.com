@@ -1344,35 +1344,17 @@ input, select, textarea {
 			border-radius: 50%;
 		}
 
-		.upper_image_ym:hover .display_cv_text {
-		    animation: fadeIn 1s;
-  			/*opacity: 1;
-			display: inline;*/
-		}
-
-
-.upper_image_ym:hover:after .display_cv_text {
-		    animation: fadeOut 1s;
-
-		}
-		@keyframes fadeIn {
-		    from { opacity: 0; }
-		      to { opacity: 1; }
-		}
-
-		@keyframes fadeOut {
-		    from { opacity: 1; }
-		      to { opacity: 0; }
-		}
-
-
-
 		.display_cv_text {
 			opacity: 0;
+			transition: 1s;
 			font-weight: 600;
 			margin-right: 15px;
 		}
 
+		.upper_image_ym:hover .display_cv_text {
+			opacity: 1;
+			transition: 1s;
+		}
 
 		#header .header_image {
   			display: block;
