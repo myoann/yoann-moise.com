@@ -342,7 +342,7 @@ function newQuote() {
 			};
 
 		// Articles.
-			$projects_children.each(function() {
+			$main_articles.each(function() {
 
 				var $this = $(this);
 

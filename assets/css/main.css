@@ -726,7 +726,14 @@ input, select, textarea {
 				object-fit: cover;
 			}
 
+			#intro > .image.main img, #about > .image.main img, #contact > .image.main img {
+				max-height: 500px; 
+			}
+
 		@media screen and (max-width:736px){
+			.upper_image_ym {
+				top: 2% !important;
+			}
 			.owl-carousel .owl-item img {
 				height: 200px;
 			}
@@ -736,8 +743,18 @@ input, select, textarea {
 			.call_to_action_button {
 				margin-bottom: 15px;
 			}
+			#intro > .image.main, #about > .image.main, #contact > .image.main {
+				position: relative;
+				display: block;
+				z-index: -1;
+				margin: -7.5rem -1.5rem 2.5rem -1.5rem;
+			}
 
 		}
+
+		.fa-chevron-right:before {
+     		margin-left: 5px;
+     	}
 
 /* List */
 
@@ -1305,10 +1322,15 @@ input, select, textarea {
 			line-height: 5.5rem;
 		}
 
+		.is-article-visible > .upper_image_ym {
+			display: none;
+		}
+
 		.upper_image_ym {
 			position: absolute;
+			display: flex;
+			align-items: center;
 			border-bottom-style: none;
-			width: 50px;
 			height: 50px;
 			z-index: 1000;
 			top: 4%;
@@ -1322,25 +1344,35 @@ input, select, textarea {
 			border-radius: 50%;
 		}
 
-		.imageBox {
-			position: relative;
-			float: left;
-		  }
-		  
-		.upper_image_ym #cv_picture {
-			position: absolute;
-			left: 0;
-			top: 0;
-			display: none;
+		.upper_image_ym:hover .display_cv_text {
+		    animation: fadeIn 1s;
+  			/*opacity: 1;
+			display: inline;*/
 		}
 
-		.upper_image_ym:hover #profile_picture {
-			display: none;
+
+.upper_image_ym:hover:after .display_cv_text {
+		    animation: fadeOut 1s;
+
 		}
-		
-		.upper_image_ym:hover #cv_picture {
-			display: block;
+		@keyframes fadeIn {
+		    from { opacity: 0; }
+		      to { opacity: 1; }
 		}
+
+		@keyframes fadeOut {
+		    from { opacity: 1; }
+		      to { opacity: 0; }
+		}
+
+
+
+		.display_cv_text {
+			opacity: 0;
+			font-weight: 600;
+			margin-right: 15px;
+		}
+
 
 		#header .header_image {
   			display: block;
@@ -1380,7 +1412,6 @@ input, select, textarea {
 				}
 
 			#header .content p {
-				text-transform: uppercase;
 				letter-spacing:.2rem;
 				font-size:.8rem;
 				line-height: 2;
@@ -1693,12 +1724,16 @@ input, select, textarea {
 		text-align: center;
 	}
 
-		#footer .copyright {
+		#footer .copyright, #footer .hobbies {
 			letter-spacing:.2rem;
 			font-size:.6rem;
 			opacity:.75;
 			margin-bottom: 0;
 			text-transform: uppercase;
+		}
+
+		#footer .hobbies {
+			margin-top: 7px;
 		}
 
 		body.is-article-visible #footer {
@@ -1761,19 +1796,24 @@ input, select, textarea {
  	filter: blur(8px);
  }
 
-.bg_work_1:after { background-image: url(../../assets/images/projects/pnb.jpg) !important; }
+.bg_work_1:after { background-image: url(../../assets/images/projects/videos_player.jpg) !important; }
 .bg_work_2:after { background-image: url(../../assets/images/projects/shummy.jpg) !important; }
-.bg_work_3:after { background-image: url(../../assets/images/projects/greeting_cards.jpg) !important; }
-.bg_work_4:after { background-image: url(../../assets/images/projects/smarthealth_red.jpg) !important; }
-.bg_work_5:after { background-image: url(../../assets/images/projects/cube.jpg) !important; }
-.bg_work_6:after { background-image: url(../../assets/images/projects/videos_player.jpg) !important; }
-.bg_work_7:after { background-image: url(../../assets/images/projects/lifi.jpg) !important; }
+.bg_work_3:after { background-image: url(../../assets/images/projects/lifi.jpg) !important; }
+.bg_work_4:after { background-image: url(../../assets/images/projects/greeting_cards.jpg) !important; }
+.bg_work_5:after { background-image: url(../../assets/images/projects/smarthealth_red.jpg) !important; }
+.bg_work_6:after { background-image: url(../../assets/images/projects/cube.jpg) !important; }
+.bg_work_7:after { background-image: url(../../assets/images/projects/pnb.jpg) !important; }
 .bg_work_8:after { background-image: url(../../assets/images/projects/blog_ws.jpg) !important; }
 .bg_work_9:after { background-image: url(../../assets/images/projects/banking.jpg) !important; }
 
-.bg_about:after {
+.bg_intro:after {
 	background-image: none !important;
 	background: linear-gradient(to bottom, #bc9c98, #ba249f) !important;
+}
+.bg_about:after {
+	background-image: none !important;
+
+	background: linear-gradient(to bottom, #71888a, #546a71) !important;
 }
 
 
