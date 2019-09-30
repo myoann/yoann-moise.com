@@ -362,11 +362,14 @@ function newQuote() {
 
 		// Events.
 			$body.on('click', function(event) {
-				// Article visible? Hide.
+				if (!$(event.target).closest('.active').length) {
+					// Article visible? Hide.
 					if ($body.hasClass('is-article-visible') && !['owl-nav', 'owl-next', 'owl-next disabled', 'owl-prev', 'owl-prev disabled', 'owl-dot active'].includes(event.target.parentNode.className))
 						$main._hide(true);
-
+				}
 			});
+
+			
 
 
 			$window.on('keyup', function(event) {

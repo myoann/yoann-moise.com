@@ -1322,6 +1322,26 @@ input, select, textarea {
 			border-radius: 50%;
 		}
 
+		.imageBox {
+			position: relative;
+			float: left;
+		  }
+		  
+		.upper_image_ym #cv_picture {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: none;
+		}
+
+		.upper_image_ym:hover #profile_picture {
+			display: none;
+		}
+		
+		.upper_image_ym:hover #cv_picture {
+			display: block;
+		}
+
 		#header .header_image {
   			display: block;
 		}
