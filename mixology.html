@@ -22,13 +22,14 @@
                 display: block;
             }
             h1 {
-                font-family: 'Eesti-heavy', sans-serif;
                 text-transform: uppercase;
                 font-size: 2em;
                 line-height: 1.2em;
                 margin-bottom: 2em;
                 letter-spacing: 0.2em;
-                text-align: center;
+            }
+            h1, h3 {
+              text-align: center;
             }
             h1, h2, h3, h4 {
                 font-weight: normal;
@@ -38,7 +39,6 @@
             }
             p {
                 margin: 1em auto;
-                text-indent: 3em;
             }
             ul, ol {
                 list-style: none;
@@ -86,7 +86,7 @@
                 background-position: center center;
                 transition: background-size 500ms ease-out;
             }
-            .cocktail:hover .image {
+            .cocktail:hover .image, .cocktail.selected .image {
                 width: 100%;
                 background-size: 100%;
             }
@@ -95,6 +95,7 @@
             .tequila .image { background-image: url(./assets/images/mixology/tequila.png); }
             .vodka .image { background-image: url(./assets/images/mixology/vodka.png); }
             .whiskey .image { background-image: url(./assets/images/mixology/whiskey.png); }
+
 
             .cocktail .buy {
                 display: block;
@@ -117,12 +118,16 @@
                 opacity: 1;
             }
 
-            .cocktail .buy a, .buy-button {
+            .cocktail .buy button {
+                width: 100%;
+                background-color: transparent;
+                border-left: 0;
+                border-right: 0;
                 border-top: 2px solid #222;
                 border-bottom: 2px solid #222;
                 display: block;
                 padding: 0.5em 1em;
-                font-family: 'Eesti' !important;
+                cursor: pointer;
             }
 
             .gutters {
@@ -189,50 +194,43 @@
 
                 <h1>My top 5 cocktails recommended</h1>
         
+                <br />
+                <h3>Start by choosing one of these bottles</h3>
+                
                 <div class="float-container cocktails">
                   <div class="cocktail gin L-1-5 S-1-3">
                     <div class="image"></div>
                     <div class="buy gutters">
-                      <p>
-                        Hendrick's Gin
-                      </p>
-                      <a target="_blank" href="https://www.masterofmalt.com/pre_bottled-cocktails/mr-lyan/mr-lyans-spotless-martini-cocktail">Buy</a>
+                      <p>Hendrick's Gin</p>
+                      <button id="gin_button">See the cocktail</button>
                     </div>
                   </div>
                   <div class="cocktail rum L-1-5 S-1-3">
                     <div class="image"></div>
                     <div class="buy">
-                      <p>
-                        Rum Diplomático
-                      </p>
-                      <a target="_blank" href="https://www.masterofmalt.com/pre_bottled-cocktails/mr-lyan/mr-lyans-rainy-day-spritz-cocktail/">Buy</a>
+                      <p>Rum Diplomático</p>
+                      <button id="rum_button">See the cocktail</button>
                     </div>
                   </div>
                   <div class="cocktail tequila L-1-5 S-1-3">
                     <div class="image"></div>
                       <div class="buy gutters">
-                        <p>
-                          Tequila Patrón
-                        </p>
-                        <a target="_blank" href="https://www.masterofmalt.com/pre_bottled-cocktails/mr-lyan/mr-lyans-candlelit-manhattan-cocktail/">Buy</a>
-                    </div>
+                        <p>Tequila Patrón</p>
+                        <button id="tequila_button">See the cocktail</button>
+                      </div>
                   </div>
                   <div class="cocktail vodka L-1-5 S-1-3">
                     <div class="image"></div>
                     <div class="buy gutters">
-                      <p>
-                        Vodka Cîroc
-                      </p>
-                      <a target="_blank" href="https://www.masterofmalt.com/pre_bottled-cocktails/mr-lyan/mr-lyans-diamond-rickey-cocktail/">Buy</a>
+                      <p>Vodka Cîroc</p>
+                      <button id="vodka_button">See the cocktail</button>
                     </div>
                   </div>
                   <div class="cocktail whiskey L-1-5 S-1-3">
                     <div class="image"></div>
                     <div class="buy gutters">
-                      <p></p>
-                        Whiskey Buffalo Trace
-                      <p></p>
-                      <a target="_blank" href="https://www.masterofmalt.com/pre_bottled-cocktails/mr-lyan/mr-lyans-bonfire-old-fashioned-cocktail/">Buy</a>
+                      <p>Whiskey Buffalo Trace</p>
+                      <button id="whiskey_button">See the cocktail</button>
                     </div>
                   </div>
                 </div>
@@ -268,5 +266,14 @@
                 </div>
         
             </section>
+
+            <script src="assets/js/jquery.min.js"></script>
+            <script style="text/javascript">
+              $('button').on('click', function(elem){
+                const cocktail_id = elem.target.id.replace("_button", "");
+                //$('.cocktail_id').removeClass('selected');
+                $('.'+cocktail_id).addClass('selected');
+              });
+           </script>
     </body>
 </html>
