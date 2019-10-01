@@ -5,6 +5,7 @@
         <meta charset="utf-8" />
         <style>
             @import url("https://fonts.googleapis.com/css?family=Muli:300,300i,600,600i,900&display=swap");
+            @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
 
             body {
                 font-family:Muli, sans-serif;
@@ -13,7 +14,6 @@
                 padding-top: 4em;
                 padding-bottom: 8em;
                 border-top: 0.75em solid #222;
-                border-bottom: 0.75em solid #222;
             }
             article {
                 margin: 2rem 0;
@@ -57,6 +57,7 @@
 
             .trunk {
                 width: 90%;
+                height: 100vh;
                 max-width: 1100px;
                 margin-left: auto;
                 margin-right: auto;
@@ -96,6 +97,53 @@
             .vodka .image { background-image: url(./assets/images/mixology/vodka.png); }
             .whiskey .image { background-image: url(./assets/images/mixology/whiskey.png); }
 
+            .gin_section, .rum_section, .tequila_section, .vodka_section, .whiskey_section {
+                display: none;
+                text-align: center;
+            }
+
+            .gin_section.selected, .rum_section.selected, .tequila_section.selected, .vodka_section.selected, .whiskey_section.selected {
+                display: initial;
+                margin-top: 5px;
+                margin: 0 auto;
+            }
+
+            .section_title {
+                font-size: 32px;
+            }
+
+            .section_description {
+                width: 75%;
+                line-height: 1.5;
+                margin: 10px auto;
+            }
+
+           /* .section_ingredients {
+                margin-top: 15px;
+                font-size: 15px;
+                font-style: italic;
+            }*/
+
+             .section_ingredients {
+                font-family: 'Caveat Brush', cursive;
+                background-image: url('./assets/images/mixology/slate.png');
+                border-radius: 4px;
+                letter-spacing: 2px;
+                background-color: grey;
+                color: white;
+                width: 25%;
+                padding: 25px 0;
+                line-height: 2;
+                margin: 0 auto;
+                margin-top: 25px;
+                font-size: 17px;
+                font-style: italic;
+            }
+            .section_ingredients_title {
+                font-size: 24px;
+                font-style: normal;
+                margin-bottom: 15px;
+            }
 
             .cocktail .buy {
                 display: block;
@@ -135,6 +183,10 @@
                 padding-right: 15px;
             }
 
+            .cocktails {
+                height: 450px;
+            }
+
             .float-container > * {
                 float: left;
             }
@@ -169,21 +221,18 @@
                 font-size: 0.8em;
                 margin: 0;
                 text-indent: 0;
-                font-family: 'texgyrescholaitalic';
             }
 
             .cta {
                 border: 3px solid #222;
                 padding: 1em;
                 margin-top: 3em;
-                font-family: 'texgyrescholaitalic', serif;
                 position: relative;
             }
 
             .cta a {
                 text-decoration: none;
                 color: #222;
-                font-family: 'texgyrescholabold', serif;
                 font-size: 0.9em;
             }
             
@@ -208,7 +257,7 @@
                   <div class="cocktail rum L-1-5 S-1-3">
                     <div class="image"></div>
                     <div class="buy">
-                      <p>Rum Diplomático</p>
+                      <p>Rum Don Papa</p>
                       <button id="rum_button">See the cocktail</button>
                     </div>
                   </div>
@@ -229,50 +278,116 @@
                   <div class="cocktail whiskey L-1-5 S-1-3">
                     <div class="image"></div>
                     <div class="buy gutters">
-                      <p>Whiskey Buffalo Trace</p>
+                      <p>Whiskey Maker's Mark</p>
                       <button id="whiskey_button">See the cocktail</button>
                     </div>
                   </div>
-                </div>
+                </div>  
         
-                <div class="L-3-5 M-3-4 S-1-1 centered">
-                  <article>
-                    <p>
-                      Classic cocktails with a little Mr Lyan magic, removing the faff and hassle of enjoying a world-class cocktail at home.
-                    </p>
-                  </article>
-                </div>
-        
-                <div class="awards L-3-5 M-3-4 S-1-1 centered">
-                   <ul class="table">
-                      <li class="L-1-2 centered">
-                        <h2>Best in Show</h2>
-                        <p>International Pre-Mixed Cocktail Awards</p> 
-                        <p>2015</p> 
-                      <!-- </li> -->
-                      </li><li class="L-1-2 centered">
-                        <p>Nominated for</p>
-                        <h2>Best New Product in the World</h2>
-                        <p>Tales of the Cocktail</p>
-                        <p>2015</p>
-                      <!-- </li> -->
-                  </li></ul>
-                </div>
-        
-        
-        
-                <div class="cta L-3-5 M-3-4 S-1-1 centered">
-                   Also available on Ocado and Amazon. Or pick them up alongside <a href="https://www.masterofmalt.com/beer/old-worthy/old-worthy-mr-lyan-lager-beer/?srh=1" target="_blank">Mr Lyan Lager</a>, and non-alcoholic <a href="https://www.masterofmalt.com/mixers/mr-lyan/firefly-mr-lyan-superfly-mixers/?srh=1" target="_blank">‘Superfly’</a> from Selfridges and other lovely retailers.
-                </div>
+                <section class="gin_section">
+                    <div class="section_title">
+                        Bijou
+                    </div>
+
+                    <div class="section_description">
+                        A bijou is composed of gin, vermouth, and chartreuse.
+                        <br />
+                        This cocktail was invented by Harry Johnson, "the father of professional bartending", who called it bijou because it combined the colors of three jewels: gin for diamond, vermouth for ruby, and chartreuse for emerald.
+                    </div>
+
+                    <div class="section_ingredients">
+                        <div class="section_ingredients_title">Ingredients</div>
+                        <ul>
+                            <li>2cl of gin</li>
+                            <li>2cl of sweet vermouth</li>
+                            <li>2cl of green chartreuse</li>
+                            <li>Dash orange bitters</li>
+                        </ul>
+                        Garnish with lemon twist.
+                    </div>
+                </section>
+
+                <section class="rum_section">
+                    <div class="section_title">
+                        
+                    </div>
+
+                    <div class="section_description">
+                        
+                    </div>
+
+                    <div class="section_ingredients">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="tequila_section">
+                    <div class="section_title">
+                        Juan Collins 
+                    </div>
+
+                    <div class="section_description">
+                        The Juan Collins is a Collins cocktail made from tequila, lime juice, sugar or some other sweetening agent, and club soda. 
+                        <br />
+                        It is a variation of the original Tom Collins, first memorialized in writing in 1876 by "the father of American mixology" Jerry Thomas. 
+                    </div>
+
+                    <div class="section_ingredients">
+                        <ul>
+                            <li>6cl of tequila</li>
+                            <li>3cl of lemon juice</li>
+                            <li>1.5cl of agave nectar</li>
+                            <li>9cl of soda</li>
+                        </ul>
+                        Served on the rocks; garnish with lime and cherry.
+                    </div>
+                </section>
+
+                <section class="vodka_section">
+                    <div class="section_title">
+                        Violet Sour
+                    </div>
+
+                    <div class="section_description">
+                        
+                    </div>
+
+                    <div class="section_ingredients">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="whiskey_section">
+                    <div class="section_title">
+                        Old Fashioned
+                    </div>
+
+                    <div class="section_description">
+                        
+                    </div>
+
+                    <div class="section_ingredients">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </section>
         
             </section>
 
             <script src="assets/js/jquery.min.js"></script>
             <script style="text/javascript">
               $('button').on('click', function(elem){
+                 $(".selected").removeClass('selected');
+
+
                 const cocktail_id = elem.target.id.replace("_button", "");
-                //$('.cocktail_id').removeClass('selected');
                 $('.'+cocktail_id).addClass('selected');
+                $('.'+cocktail_id+'_section').addClass('selected');
               });
            </script>
     </body>
