@@ -1,2 +1,0 @@
-<h1>About</h1>
-<p>Shummy is the only quick and simple mobile application that allows college students to purchase home cooked meals for pickup or delivery directly from passionate cookers on or off campus, connecting campuses with their local communities and sharing the enthusiasm for cooking and eating.</p>
