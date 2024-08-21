@@ -4,12 +4,6 @@
 		<title>Mixology</title>
         <meta charset="utf-8" />
         <style>
-            @import url("https://fonts.googleapis.com/css?family=Muli:300,300i,600,600i,900&display=swap");
-            @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
-
-            body {
-                font-family:Muli, sans-serif;
-            }
             section {
                 padding-top: 4em;
                 padding-bottom: 8em;
@@ -161,8 +155,6 @@
                 padding: 0 0.75em 0.75em 0.75em;
                 background-color: white;
                 text-align: center;
-                border: 1px solid #222;
-                border-top: 3px solid #222;
                 filter: alpha(opacity=0);
                 opacity: 0;
                 transition: 500ms ease-out;
@@ -173,15 +165,18 @@
                 opacity: 1;
             }
 
+            .cocktail .buy p {
+                margin: 0;
+                font-size: 1.25em;
+                font-weight: bold;
+            }
+
             .cocktail .buy button {
                 width: 100%;
+                margin-top: 0.5em;
                 background-color: transparent;
-                border-left: 0;
-                border-right: 0;
-                border-top: 2px solid #222;
-                border-bottom: 2px solid #222;
+                border: none;
                 display: block;
-                padding: 0.5em 1em;
                 cursor: pointer;
             }
 
@@ -356,7 +351,7 @@
         
             </section>
 
-            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery-3.7.1.min.js"></script>
             <script style="text/javascript">
               $('button, .cocktail').on('click', function(elem){
                 console.log(elem);
