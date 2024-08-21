@@ -695,6 +695,7 @@ input, select, textarea {
 			}
 
 		.image.main {
+			width: 100%;
 			position: absolute;
 			z-index: -1;
 			top: 0;
@@ -1778,15 +1779,13 @@ input, select, textarea {
  	filter: blur(8px);
  }
 
-.bg_work_1:after { background-image: url(../../assets/images/projects/videos_player.jpg) !important; }
-.bg_work_2:after { background-image: url(../../assets/images/projects/shummy.jpg) !important; }
-.bg_work_3:after { background-image: url(../../assets/images/projects/lifi.jpg) !important; }
-.bg_work_4:after { background-image: url(../../assets/images/projects/greeting_cards.jpg) !important; }
-.bg_work_5:after { background-image: url(../../assets/images/projects/smarthealth_red.jpg) !important; }
-.bg_work_6:after { background-image: url(../../assets/images/projects/cube.jpg) !important; }
-.bg_work_7:after { background-image: url(../../assets/images/projects/pnb.jpg) !important; }
-.bg_work_8:after { background-image: url(../../assets/images/projects/blog_ws.jpg) !important; }
-.bg_work_9:after { background-image: url(../../assets/images/projects/banking.jpg) !important; }
+.bg_work_1:after { background-image: url(../../assets/images/projects/carpool.webp) !important; }
+.bg_work_2:after { background-image: url(../../assets/images/projects/travel_planner.webp) !important; }
+.bg_work_3:after { background-image: url(../../assets/images/projects/weather.webp) !important; }
+.bg_work_4:after { background-image: url(../../assets/images/projects/videos_player.webp) !important; }
+.bg_work_5:after { background-image: url(../../assets/images/projects/lifi.webp) !important; }
+.bg_work_6:after { background-image: url(../../assets/images/projects/smarthealth_red.webp) !important; }
+.bg_work_7:after { background-image: url(../../assets/images/projects/cube.webp) !important; }
 
 .bg_intro:after {
 	background-image: none !important;
