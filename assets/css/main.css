@@ -1382,7 +1382,6 @@ input, select, textarea {
 			}
 
 				#header .content .inner > :last-child {
-					margin-bottom: 0;
 					width: 67%;
 					margin: 0 auto;
 				}
