@@ -93,11 +93,10 @@
 					visibleClass: 'visible'
 
 			}, userConfig);
-
-			// Expand "target" if it's not a jQuery object already.
-				if (typeof config.target != 'jQuery')
+			
+				// Expand "target" if it's not a jQuery object already.
+				if (!(config.target instanceof jQuery))
 					config.target = $(config.target);
-
 		// Panel.
 
 			// Methods.
@@ -528,8 +527,9 @@
 		var key = '__prioritize';
 
 		// Expand $elements if it's not already a jQuery object.
-			if (typeof $elements != 'jQuery')
+			if (!(($elements instanceof jQuery))) {
 				$elements = $($elements);
+			}
 
 		// Step through elements.
 			$elements.each(function() {

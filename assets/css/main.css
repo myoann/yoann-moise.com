@@ -15,7 +15,6 @@ section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
 
@@ -506,7 +505,6 @@ input, select, textarea {
 				text-rendering: auto;
 				line-height: 1;
 				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
 				font-weight: 900;
 			}
 
@@ -615,7 +613,6 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
 			font-weight: 400;
 		}
 
@@ -629,10 +626,6 @@ input, select, textarea {
 
 		.icon.solid:before {
 			font-weight: 900;
-		}
-
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
 		}
 
 /* Image */
@@ -1779,21 +1772,18 @@ input, select, textarea {
  	filter: blur(8px);
  }
 
-.bg_work_1:after { background-image: url(../../assets/images/projects/carpool.webp) !important; }
-.bg_work_2:after { background-image: url(../../assets/images/projects/travel_planner.webp) !important; }
-.bg_work_3:after { background-image: url(../../assets/images/projects/weather.webp) !important; }
-.bg_work_4:after { background-image: url(../../assets/images/projects/videos_player.webp) !important; }
-.bg_work_5:after { background-image: url(../../assets/images/projects/lifi.webp) !important; }
-.bg_work_6:after { background-image: url(../../assets/images/projects/smarthealth_red.webp) !important; }
-.bg_work_7:after { background-image: url(../../assets/images/projects/cube.webp) !important; }
+.bg_work_1:after { background: url(../../assets/images/projects/carpool.webp) !important; }
+.bg_work_2:after { background: url(../../assets/images/projects/travel_planner.webp) !important; }
+.bg_work_3:after { background: url(../../assets/images/projects/weather.webp) !important; }
+.bg_work_4:after { background: url(../../assets/images/projects/videos_player.webp) !important; }
+.bg_work_5:after { background: url(../../assets/images/projects/lifi.webp) !important; }
+.bg_work_6:after { background: url(../../assets/images/projects/smarthealth_red.webp) !important; }
+.bg_work_7:after { background: url(../../assets/images/projects/cube.webp) !important; }
 
 .bg_intro:after {
-	background-image: none !important;
 	background: linear-gradient(to bottom, #bc9c98, #ba249f) !important;
 }
 .bg_about:after {
-	background-image: none !important;
-
 	background: linear-gradient(to bottom, #71888a, #546a71) !important;
 }
 
