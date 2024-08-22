@@ -4,7 +4,8 @@
 		<title>Yoann MOISE</title>
 		<meta charset="utf-8" />
 		<meta property="og:title" content="Yoann Moise"/>
-		<meta property="og:image" content="https://yoann-moise.com/assets/images/yoann-moise.webp"/>
+		<meta property="og:image" content="https://yoann-moise.com/assets/images/yoann-moise-full.jpg"/>
+		<meta name="description" content="Learn more about Yoann Moise, a passionate developer!"/>
 		<meta property="og:description" content="Learn more about Yoann Moise, a passionate developer!"/>
 		<meta property="og:url" content="https://yoann-moise.com/" />
 		<meta property="og:locale" content="en_US" />
@@ -29,13 +30,13 @@
 		<div id="wrapper">
 			<header id="header">
 				<div class="header_image">
-					<img src="assets/images/logo.webp" alt="Logo Yoann Moise" class="logo"/>
+					<img src="assets/images/logo.webp" alt="Logo Yoann Moise" loading="lazy" class="logo"/>
 				</div>
 
 				<div class="content">
 					<div class="inner">
 						<h1>Hi there! I'm Yoann Moise!</h1>
-						<h3 class="quote">I am currently - not - <span id="quote_display" onclick="newQuote()"></span></h3>
+						<h2 class="quote">I am currently - not - <span id="quote_display" onclick="newQuote()"></span></h2>
 						<p>
 							Building something that will help people in their everyday life is what I love about software development.
 							<br /> <br />
@@ -282,10 +283,10 @@
 				$(".owl-carousel").owlCarousel({
 					items:1,
 					loop:false,
+					dots: false,
 					nav:true,
 					navText : ["<img src='./assets/icons/chevron-left-solid.svg' alt='Chevron left' />", "<img src='./assets/icons/chevron-right-solid.svg' alt='Chevron right' />"],
 					center:true,
-					margin:10,
 					URLhashListener:true,
 					startPosition: 'URLHash'
 				});
