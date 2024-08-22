@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Muli:300,300i,600,600i,900&display=swap");
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -133,7 +131,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #fff;
-		font-family:Muli, sans-serif;
+		font-family: "Mulish", sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.65;
@@ -699,6 +697,7 @@ input, select, textarea {
 			position: relative;
 			display: block;
 			z-index: -1;
+			width: calc(100% + 5rem);
 			margin: -9.2rem -2.5rem 2.5rem -2.5rem;
 		}
 
@@ -735,12 +734,6 @@ input, select, textarea {
 			}
 			.call_to_action_button {
 				margin-bottom: 15px;
-			}
-			#intro > .image.main, #about > .image.main, #contact > .image.main {
-				position: relative;
-				display: block;
-				z-index: -1;
-				margin: -7.5rem -1.5rem 2.5rem -1.5rem;
 			}
 
 		}
@@ -1173,7 +1166,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url(../../assets/images/bg.jpg);
+			background-image: url(../../assets/images/bg.webp);
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1726,6 +1719,7 @@ input, select, textarea {
 
 .quote {
 	cursor: pointer;
+	font-size: 1rem;
 }
 
 .call_to_action_button {
