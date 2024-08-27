@@ -23,7 +23,7 @@ function newQuote() {
     var crypto = window.crypto || window.msCrypto;
     var array = new Uint32Array(1);
     crypto.getRandomValues(array); // Compliant for security-sensitive use cases
-	
+
     var randomNumber = array[0] % quotes.length;
     $('#quote_display').html(quotes[randomNumber]);
 }
@@ -139,7 +139,7 @@ function newQuote() {
 								if ($is_project) $('#projects').addClass('active');
 
 							// Add a specific class to the background
-								$("#bg").addClass(`bg_${id}`);
+								$("#bg").addClass(`bg-${id}`);
 
 							// Unlock.
 								locked = false;
@@ -184,7 +184,7 @@ function newQuote() {
 										if ($is_project) $('#projects').addClass('active');
 
 										// Add a specific class to the background
-										$("#bg").addClass(`bg_${id}`);
+										$("#bg").addClass(`bg-${id}`);
 
 										// Window stuff.
 											$window
@@ -229,7 +229,7 @@ function newQuote() {
 										if ($is_project) $('#projects').addClass('active');
 
 										// Add a specific class to the background
-										$("#bg").addClass(`bg_${id}`);
+										$("#bg").addClass(`bg-${id}`);
 
 
 										// Window stuff.
