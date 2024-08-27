@@ -20,8 +20,12 @@ var quotes = [
 ];
 
 function newQuote() {
-	var randomNumber = Math.floor(Math.random() * (quotes.length));
-	$('#quote_display').html(quotes[randomNumber]);
+    var crypto = window.crypto || window.msCrypto;
+    var array = new Uint32Array(1);
+    crypto.getRandomValues(array); // Compliant for security-sensitive use cases
+	
+    var randomNumber = array[0] % quotes.length;
+    $('#quote_display').html(quotes[randomNumber]);
 }
 
 
